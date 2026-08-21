@@ -12,3 +12,5 @@ im of a legal age for linkedin today :)
  - Setup blog and customise
  - add in that one funny array from the thingy where we supposed to add into our `about.md`
 
+
+
