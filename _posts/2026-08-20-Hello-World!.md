@@ -4,7 +4,6 @@ layout: post
 
 Hi :D
 
-im of a legal age for linkedin today :)
 
 # What did I do today?
 
