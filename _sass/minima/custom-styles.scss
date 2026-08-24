@@ -1,2 +1,16 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+body {
+	background: linear-gradient(135deg, #c1121f 0%, #000000 100%) fixed;
+}
+
+.site-header {
+	background: rgba(0, 0, 0, 0.72);
+}
+
+.site-nav {
+	@include media-query($on-medium) {
+		background-color: rgba(0, 0, 0, 0.92);
+	}
+}
