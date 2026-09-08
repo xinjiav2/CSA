@@ -46,6 +46,7 @@ minima:
   skin: dark
   nav_pages:
     - about.md
+    - study-records.md
     - posts.md
 
   social_links:

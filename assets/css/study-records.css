@@ -1,0 +1,28 @@
+.tracker-app { --accent:#8b5cf6; --panel:#171923; --line:#303446; max-width:1100px; margin:2rem auto; color:#f4f4f5; }
+.tracker-app .hero { padding:2rem; border:1px solid var(--line); border-radius:18px; background:linear-gradient(135deg,#211a3b,#141621); }
+.tracker-app .eyebrow { color:#c4b5fd; text-transform:uppercase; letter-spacing:.12em; font-weight:700; font-size:.78rem; }
+.tracker-app h1 { margin:.3rem 0; }
+.tracker-app .summary { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.25rem 0; }
+.tracker-app .metric,.tracker-app .panel { border:1px solid var(--line); border-radius:14px; background:var(--panel); padding:1.25rem; }
+.tracker-app .metric strong { display:block; color:#c4b5fd; font-size:2rem; }
+.tracker-app form { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.tracker-app label { display:flex; flex-direction:column; gap:.35rem; font-weight:600; }
+.tracker-app .wide { grid-column:span 3; }
+.tracker-app input,.tracker-app select,.tracker-app textarea { background:#0e1018; color:#fff; border:1px solid #454a60; border-radius:8px; padding:.7rem; }
+.tracker-app button { border:0; border-radius:8px; padding:.65rem .9rem; background:var(--accent); color:#fff; cursor:pointer; font-weight:700; }
+.tracker-app button.secondary { background:#3f455c; }
+.tracker-app button.danger { background:#9f3342; }
+.tracker-app .form-actions { display:flex; gap:.6rem; align-items:end; }
+.tracker-app .table-wrap { overflow-x:auto; margin-top:1rem; }
+.tracker-app table { width:100%; border-collapse:collapse; }
+.tracker-app th,.tracker-app td { padding:.75rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+.tracker-app small { color:#a1a1aa; }
+.tracker-app .status { font-size:.72rem; padding:.25rem .45rem; border-radius:99px; background:#3f455c; white-space:nowrap; }
+.tracker-app .status.completed { background:#166534; }
+.tracker-app .status.in_progress { background:#854d0e; }
+.tracker-app .actions { display:flex; gap:.4rem; }
+.tracker-app .message { min-height:1.5rem; margin:.8rem 0; }
+.tracker-app .message.success { color:#86efac; }
+.tracker-app .message.error { color:#fca5a5; }
+.tracker-app .empty { text-align:center; color:#a1a1aa; padding:2rem; }
+@media (max-width:720px) { .tracker-app form,.tracker-app .summary { grid-template-columns:1fr; } .tracker-app .wide { grid-column:auto; } }
