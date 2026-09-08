@@ -22,7 +22,7 @@ baseurl: /challenge/
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-22T00:00:00+00:00","datePublished":"2025-08-22T00:00:00+00:00","description":"Master essential development tools and complete team onboarding through hands-on setup, coding, and collaboration. Begin the process for Project-based Learning (PBL) by launching into a project.","headline":"Onboarding Challenge - Ground 0","mainEntityOfPage":{"@type":"WebPage","@id":"/sprint1/challenge/csa/"},"url":"/sprint1/challenge/csa/"}</script>
 <!-- End Jekyll SEO tag -->
-<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Open Coding" />
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/challenge.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Open Coding" />
 <!-- Minima start custom head snippets -->
 <!-- Favicon for browser tabs and bookmarks -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">

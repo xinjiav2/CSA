@@ -1,0 +1,274 @@
+:root {
+  --challenge-bg: #0f1115;
+  --challenge-panel: #171923;
+  --challenge-panel-raised: #1d2130;
+  --challenge-border: #303446;
+  --challenge-text: #e6e6e6;
+  --challenge-muted: #a7adb8;
+  --challenge-accent: #11a69f;
+  --challenge-accent-bright: #57d4c8;
+  --challenge-pink: #d85a7b;
+  --challenge-warning: #ffcb6b;
+}
+
+.lesson-player {
+  display: flex;
+  min-height: calc(100vh - 4rem);
+  background: var(--challenge-bg);
+  color: var(--challenge-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.lesson-player a {
+  color: var(--challenge-accent-bright);
+}
+
+.lesson-sidebar {
+  flex: 0 0 18rem;
+  background: var(--challenge-panel);
+  border-right: 1px solid var(--challenge-border);
+  color: var(--challenge-text);
+}
+
+.sidebar-header,
+.topbar-lesson {
+  background: var(--challenge-panel-raised);
+  border-color: var(--challenge-border);
+}
+
+.sidebar-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--challenge-border);
+}
+
+.sidebar-header h2,
+.lesson-header h1,
+.lesson-body h2,
+.lesson-body h3,
+.lesson-body h4 {
+  color: var(--challenge-text);
+}
+
+.sidebar-header h2 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+}
+
+.progress-label,
+.sprint-weeks,
+.lesson-meta,
+.psw-dialog-muted {
+  color: var(--challenge-muted);
+}
+
+.progress-bar-sidebar,
+.topbar-progress {
+  background: var(--challenge-border);
+}
+
+.progress-bar-sidebar-fill,
+.topbar-progress-fill {
+  background: var(--challenge-accent);
+}
+
+.sprint-toggle,
+.lesson-item {
+  color: var(--challenge-text);
+  border-color: var(--challenge-border);
+}
+
+.sprint-toggle:hover,
+.lesson-item:hover,
+.lesson-item.active {
+  background: var(--challenge-panel-raised);
+}
+
+.lesson-item.active {
+  border-left-color: var(--challenge-accent);
+}
+
+.lesson-status-icon.completed,
+.modal-lesson-status.completed,
+#complete-icon-topbar.fa-circle-check {
+  color: var(--challenge-accent-bright);
+}
+
+.lesson-status-icon.incomplete,
+.modal-lesson-status.incomplete {
+  color: var(--challenge-muted);
+}
+
+.lesson-main {
+  min-width: 0;
+  flex: 1;
+  background: var(--challenge-bg);
+}
+
+.topbar-lesson {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid var(--challenge-border);
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  color: var(--challenge-muted);
+}
+
+.breadcrumbs .current {
+  color: var(--challenge-text);
+}
+
+#topbar-complete-btn,
+.submit-btn,
+.btn-primary,
+.psw-btn {
+  border: 1px solid var(--challenge-accent);
+  background: var(--challenge-accent);
+  color: #081313;
+  font-weight: 700;
+}
+
+#topbar-complete-btn:hover,
+.submit-btn:hover,
+.btn-primary:hover,
+.psw-btn:hover {
+  background: var(--challenge-accent-bright);
+}
+
+.lesson-content-inner {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 2.5rem clamp(1rem, 4vw, 3rem) 4rem;
+}
+
+.lesson-header {
+  border-bottom: 1px solid var(--challenge-border);
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+}
+
+.lesson-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.lesson-body {
+  line-height: 1.7;
+}
+
+.lesson-body blockquote {
+  border-left: 3px solid var(--challenge-accent);
+  background: var(--challenge-panel);
+  color: var(--challenge-text);
+}
+
+.lesson-body table,
+.grading-table {
+  width: 100%;
+  border-color: var(--challenge-border);
+  background: var(--challenge-panel);
+}
+
+.lesson-body th,
+.lesson-body td,
+.grading-table th,
+.grading-table td {
+  border-color: var(--challenge-border);
+}
+
+.lesson-body th,
+.grading-table th {
+  background: var(--challenge-panel-raised);
+  color: var(--challenge-text);
+}
+
+.lesson-body code,
+.lesson-body pre,
+.lesson-body .highlight {
+  background: #11141b;
+  border-color: var(--challenge-border);
+}
+
+.lesson-body code {
+  color: var(--challenge-warning);
+}
+
+.assignment-submission,
+.grading-module-panel,
+.psw-panel,
+.psw-dialog,
+.grading-modal-box {
+  background: var(--challenge-panel);
+  border: 1px solid var(--challenge-border);
+  color: var(--challenge-text);
+}
+
+.assignment-submission,
+.grading-module-panel {
+  padding: 1.25rem;
+  margin-top: 2rem;
+}
+
+.assignment-submission input,
+.assignment-submission textarea,
+.grading-module-panel input,
+.grading-modal-box input {
+  background: var(--challenge-bg);
+  border: 1px solid var(--challenge-border);
+  color: var(--challenge-text);
+}
+
+.assignment-submission input:focus,
+.assignment-submission textarea:focus,
+.grading-module-panel input:focus,
+.grading-modal-box input:focus {
+  border-color: var(--challenge-accent);
+  outline: 2px solid rgba(17, 166, 159, 0.2);
+}
+
+.file-upload-area,
+.submission-tab,
+.btn-secondary {
+  border-color: var(--challenge-border);
+  background: var(--challenge-panel-raised);
+  color: var(--challenge-text);
+}
+
+.submission-tab.active,
+.submission-tab:hover,
+.btn-secondary:hover {
+  border-color: var(--challenge-accent);
+  color: var(--challenge-accent-bright);
+}
+
+.submission-status.success {
+  color: var(--challenge-accent-bright);
+}
+
+.submission-status.error,
+.grading-modal-error {
+  color: #f07178;
+}
+
+.timeline-modal,
+.modal-sprint-card {
+  background: var(--challenge-panel);
+  color: var(--challenge-text);
+  border-color: var(--challenge-border);
+}
+
+@media (max-width: 768px) {
+  .lesson-player {
+    display: block;
+  }
+
+  .lesson-sidebar {
+    display: none;
+  }
+
+  .lesson-content-inner {
+    padding-top: 1.5rem;
+  }
+}
