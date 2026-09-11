@@ -10,11 +10,60 @@ showReadingTime: true
 
 | Section | Ready? |
 | :---: | :---: |
-| 1. Understand the Challenge | ✅ |
-| 2. My Development Environment  | ✅ |
-| 3. My GitHub Workflow | ✅ |
-| 4. Forming the Team | ✅ |
-| 5. Beginning the Project | ✅ |
+| 1. Understand the Challenge | |
+| I understand that the goal was not simply to install tools, but to learn how to work through an unfamiliar development environment. | ✅ |
+| I can identify at least one problem I encountered and explain how I solved or investigated it. | ✅ |
+| I have documented something that could help another student. | ✅ |
+| I have a story about how forming a team, positives and challenges. | ✅ |
+| I have a story about starting a team project, positives and challenges. | ✅ |
+| I can explain the Onboarding Objectives in my own words. | ✅ |
+| 2. My Development Environment | |
+| I can open my development environment and begin working without waiting for someone else. | ✅ |
+| I can edit and preview the files I will use in my course. | ✅ |
+| I can use Git/GitHub to commit and push my work. | ✅ |
+| I know where to find the tool setup and troubleshooting guides. | ✅ |
+| I know how to ask for help when I am stuck. | ✅ |
+| I have a working strategy for my personal computer and development environment. | ❌ |
+| 3. My GitHub Workflow | |
+| I can locate my GitHub repository. | ✅ |
+| I can create an issue in my GitHub repository location. | ✅ |
+| I can commit a change in GitHub. | ✅ |
+| I can create or edit a file in VS Code. | ✅ |
+| I can commit and sync changes from VS Code to GitHub. | ✅ |
+| I know about GitHub Actions and can determine if my site is working. | ✅ |
+| I know how to load my GitHub Pages portfolio site in my browser. | ✅ |
+| 4. Forming the Team | |
+| Before Forming the Team | |
+| I have completed or reviewed the team formation process. | ✅ |
+| I have read an article on selecting effective development teams. | ❌ |
+| I have identified my persona, skills, interests, and strengths in OCS. | ✅ |
+| I understand the expectation for diversity of skills, interests, and perspectives when forming teams. | ✅ |
+| I have considered which teammates I may work well with. | ✅ |
+| I have sat in proximity to potential teammates. | ✅ |
+| Establishing the Team | |
+| I know my team members' names. | ✅ |
+| We have discussed our skills, interests, and perspectives. | ✅ |
+| We have established a team communication channel. | ✅ |
+| I have shared my preferred contact method with my teammates. | ✅ |
+| We have established a team Agile manifesto and communication protocols. | ❌ |
+| Beginning to Operate as a Team | |
+| We have identified the coding challenges required for our course. | ✅ |
+| We have created team and individual GitHub repositories. | ✅ |
+| We have created team and individual GitHub issues, kanban, and milestones. | ✅ |
+| We have begun team decision-making processes such as stand-ups, pin-ups, and burndowns. | ✅ |
+| We have practiced Live Share, debugging, or pair programming. | ✅ |
+| We have established a process for discussing problems and resolving issues. | ✅ |
+| We have established our team contribution workflows: fork, branch, pull request, or direct collaboration as appropriate. | ✅ |
+| We have identified how we will accept feedback and take action between checkpoints. | ✅ |
+| 5. Beginning the Project | |
+| I have participated in project ideation. | ✅ |
+| I can describe at least one problem or project idea our team is considering. | ✅ |
+| I have contributed an idea, question, research finding, or technical consideration. | ✅ |
+| I have created or contributed to a GitHub issue related to our work. | ✅ |
+| We have established our first project direction. | ✅ |
+| I understand what tasks I am expected to accomplish before the next sprint checkpoint. | ✅ |
+| We have identified what the team needs to accomplish before the next checkpoint. | ✅ |
+| I know that presenting evidence is part of my responsibility as I work. | ✅ |
 
 **Java and OOP Summary**
 
