@@ -43,7 +43,7 @@ plugins:
 
 # Minima-specific settings
 minima:
-  skin: dark
+  skin: classic
   nav_pages:
     - about.md
     - study-records.md
