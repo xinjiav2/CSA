@@ -2,7 +2,7 @@
 # ------------------
 
 title: CSA Portfolio
-description: "Class of 20268"
+description: "Class of 2028"
 owner_name: Zhengji Li
 github_username: xinjiav2
 github_repo: "CSA"
@@ -10,7 +10,7 @@ baseurl: "/CSA"
 future: true
 
 author:
-  name: Zhengji Li
+  name: Zhengji Li (Jade)
   email: li.xuzhu10@gmail.com
 #
 # The `>` after `description:` means to ignore line-breaks until next key. If
@@ -43,7 +43,7 @@ plugins:
 
 # Minima-specific settings
 minima:
-  skin: classic
+  skin: dark
   nav_pages:
     - about.md
     - study-records.md
