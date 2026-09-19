@@ -6,6 +6,13 @@ permalink: /about/
 
 Hi! I'm Zhengji
 
+I'm a Junior at Del Norte High School, taking APCSA
+I enjoy playing around with tech, as well as IT work and cybersecurity
+
+I've recently worked on many projects such as making pr's to other repositories outside of APCSA, as well as creating a windows/ubuntu dual boot on my arm based laptop :)
+
+
+
 Where I'm from
 
 <div id="grid_container"></div>
