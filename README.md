@@ -1,4 +1,12 @@
 > [!WARNING]
+Hi! <br/>
+My name is Zhengji, however you may know me as Jade
+
+This is my blog for APCSA, for the 2026-2027 school year.
+
+This repo was forked from jekyll/minima, the following is the original readme
+
+
 > **The `master` branch is under active development towards a semver-major release with non-backwards-compatible changes.**
 > 
 > While you may use this theme in the current state either via the `jekyll-remote-theme` plugin or via a Gemfile, it is
