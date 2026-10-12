@@ -95,3 +95,6 @@ it can only be used inside the Measurement class itself
 it cannot be called from another class like Calculations
 
 So when Calculations.compare(...) tries to call m1.toInches(), Java throws a compile-time error because the method is not accessible outside Measurement.
+
+## 
+![alt text](image.png)
