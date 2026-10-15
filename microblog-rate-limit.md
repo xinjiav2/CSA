@@ -73,6 +73,10 @@ not create real posts or commits.
 
 ## Windows local setup (2026-10-14)
 
+The subsequent [Debian WSL Make repair](make-wsl-fix.md) makes WSL the local
+default: `.bundle/config` now uses `vendor/bundle-debian`. For the Windows commands
+below, set `$env:BUNDLE_PATH='vendor/bundle'` first. Use `make` directly in Debian.
+
 Ruby 3.3 was already installed. Installed Bundler 4.0.19 and RubyInstaller's
 MSYS2/MINGW toolchain (`ridk.cmd install 1 3`) to build native gems, then installed
 the bundle into `pages/vendor/bundle`. The ignored `.bundle/config` records that
