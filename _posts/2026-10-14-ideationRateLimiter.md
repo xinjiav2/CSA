@@ -12,6 +12,8 @@ On the microblog within the lessons, if you were to make a post, you can spam th
 
 My plan is to add a rate limiting feature by adding a new file
 
+Made by: Zhengji, Rudra
+
 # Microblog rate limiting
 
 Implemented in the `pages` repository on `fix/microblog-rate-limit`.
