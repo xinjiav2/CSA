@@ -377,4 +377,61 @@ For example:
 pacman -Q | grep firmware
 ```
 
-One limitation: loading kernel modules inside the chroot affects the running Ubuntu kernel, not a future Arch boot. So we should avoid using modprobe as a test of whether Arch's Wi-Fi is fixed.
+One limitation: loading kernel modules inside the chroot affects the running Ubuntu kernel, not a future Arch boot. So avoid using modprobe as a test of whether Arch's Wi-Fi is fixed.
+
+Now run these commands from Ubuntu:
+```bash
+ls -lah /lib/firmware/ath11k/WCN6855/hw2.1/
+```
+
+And:
+```bash
+ls -lah /mnt/arch/usr/lib/firmware/ath11k/WCN6855/hw2.1/
+```
+
+Also compare the hw2.0 directories:
+```bash
+ls -lah /lib/firmware/ath11k/WCN6855/hw2.0/
+ls -lah /mnt/arch/usr/lib/firmware/ath11k/WCN6855/hw2.0/
+```
+
+From Ubuntu, outside the chroot, run:
+```bash
+sudo mkdir -p /mnt/arch/usr/lib/firmware/ath11k/WCN6855
+```
+
+First, back up Arch's existing firmware:
+```bash
+sudo cp -a \
+  /mnt/arch/usr/lib/firmware/ath11k/WCN6855 \
+  /mnt/arch/root/WCN6855-backup
+```
+
+Then copy Ubuntu's working firmware:
+```bash
+sudo cp -a \
+  /lib/firmware/ath11k/WCN6855/. \
+  /mnt/arch/usr/lib/firmware/ath11k/WCN6855/
+```
+
+This copies both hw2.0 and hw2.1, including the firmware modifications that made Ubuntu work.
+
+It doesn't modify Ubuntu's firmware.
+
+One caveat: If Arch has uncompressed firmware files alongside Ubuntu's compressed .zst files, copying may leave both versions present. We'll need to check for that if Wi-Fi still doesn't work.
+Step 3: Check kernel modules
+Because both installations use the same kernel version, check whether Arch has the necessary driver modules.
+
+From Ubuntu:
+```bash
+ls /mnt/arch/usr/lib/modules/
+```
+
+Then:
+```bash
+find /mnt/arch/usr/lib/modules/ -name 'ath11k_pci.ko*'
+```
+
+If nothing appears, Arch may not have the appropriate modules installed, even though it's booting Ubuntu's kernel.
+
+Reboot into arch and connect to wifi :)
