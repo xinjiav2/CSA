@@ -355,7 +355,7 @@ We should also check for HP-specific firmware files.
 
 If Ubuntu has firmware that Arch is missing, we can copy the relevant files.
 
-Don't copy the entire firmware directory yet. We should identify exactly which files Arch needs.
+Don't copy the entire firmware directory yet. Identify exactly which files Arch needs.
 4. Enter the Arch chroot
 Once the partition is mounted:
 ```bash
@@ -368,7 +368,7 @@ sudo mount --rbind /run /mnt/arch/run
 sudo mount --make-rslave /mnt/arch/run
 sudo chroot /mnt/arch /bin/bash
 ```
-Now you're operating inside Arch's filesystem while Ubuntu's kernel is running.
+Once operating inside Arch's filesystem while Ubuntu's kernel is running.
 
 You can inspect installed packages and modify Arch's firmware.
 
