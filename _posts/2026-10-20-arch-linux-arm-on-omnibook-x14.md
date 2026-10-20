@@ -310,17 +310,23 @@ Alternative: bind-mount or symlink Ubuntu's `/lib/modules` into the Arch root so
 # Fix Wi-Fi issue
 1. Boot into Ubuntu
 First, verify that Wi-Fi still works on Ubuntu:
-`nmcli device status`
-`uname -r`
+```bash
+mcli device status
+uname -r
+```
 
 Then identify the partitions:
-`lsblk -f`
+```bash
+lsblk -f
+```
 
 We need to find the Arch root partition.
 2. Mount your Arch installation
 For example, if Arch is installed on `/dev/nvme0n1p7`:
-`sudo mkdir -p /mnt/arch`
-`sudo mount /dev/nvme0n1p7 /mnt/arch`
+```bash
+sudo mkdir -p /mnt/arch
+sudo mount /dev/nvme0n1p7 /mnt/arch
+```
 
 Replace `/dev/nvme0n1p7` with your the Arch root partition. Don't guess the partition number.
 
@@ -329,10 +335,14 @@ If Arch uses Btrfs subvolumes, LUKS encryption, or a separate /usr partition, th
 Before entering the chroot, we can compare Ubuntu's working firmware with Arch's.
 
 On Ubuntu:
-`ls /lib/firmware/ath11k/`
+```bash
+ls /lib/firmware/ath11k/
+```
 
 Then:
-`ls /mnt/arch/usr/lib/firmware/ath11k/`
+```bash
+ls /mnt/arch/usr/lib/firmware/ath11k/
+```
 
 Since the HP OmniBook X 14 previously needed Qualcomm firmware adjustments, pay particular attention to:
 ```plaintext
@@ -348,24 +358,23 @@ If Ubuntu has firmware that Arch is missing, we can copy the relevant files.
 Don't copy the entire firmware directory yet. We should identify exactly which files Arch needs.
 4. Enter the Arch chroot
 Once the partition is mounted:
+```bash
 sudo mount --rbind /dev /mnt/arch/dev
 sudo mount --make-rslave /mnt/arch/dev
-
 sudo mount -t proc proc /mnt/arch/proc
-
 sudo mount --rbind /sys /mnt/arch/sys
 sudo mount --make-rslave /mnt/arch/sys
-
 sudo mount --rbind /run /mnt/arch/run
 sudo mount --make-rslave /mnt/arch/run
-
 sudo chroot /mnt/arch /bin/bash
-
+```
 Now you're operating inside Arch's filesystem while Ubuntu's kernel is running.
 
 You can inspect installed packages and modify Arch's firmware.
 
 For example:
+```bash
 pacman -Q | grep firmware
+```
 
 One limitation: loading kernel modules inside the chroot affects the running Ubuntu kernel, not a future Arch boot. So we should avoid using modprobe as a test of whether Arch's Wi-Fi is fixed.
