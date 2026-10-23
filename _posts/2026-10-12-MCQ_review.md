@@ -98,3 +98,37 @@ So when Calculations.compare(...) tries to call m1.toInches(), Java throws a com
 
 ## 
 ![alt text](image.png)
+
+
+## 19
+
+```java
+int r = (int) (Math.random() * 6) + 10;
+```
+
+my answer: It generates a random integer between  10  and  16,  inclusive, and assigns it to r.
+
+answer : It generates a random integer between  10  and  15,  inclusive, and assigns it to r.
+
+## 35 
+```java
+public static boolean mystery(ArrayList<Integer> numbers)
+{
+   int prev = Integer.MAX_VALUE;
+   for (int num : numbers)
+   {
+      if (num > prev)
+      {
+         return false;
+      }
+      prev = num;
+   }
+   return true;
+}
+```
+
+my answer: 
+It returns  true  if  numbers  is sorted from least to greatest and returns  false  otherwise.
+
+correct answer:
+It returns  true  if  numbers  is sorted from greatest to least and returns  false  otherwise.
