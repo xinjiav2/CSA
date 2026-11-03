@@ -1,0 +1,68 @@
+# Why Enhanced For-Loops Throw ConcurrentModificationException
+
+An enhanced for-loop throws a `ConcurrentModificationException` because **it secretly uses an underlying `Iterator` to traverse the collection, and calling `words.remove(w)` modifies the collection without informing that iterator.**
+
+Here is exactly how it breaks down under the hood:
+
+## 1. The Hidden Iterator
+When you write an enhanced for-loop, the Java compiler translates it into a standard iterator loop.
+
+**Your code:**
+```java
+for (String w : words) {
+    words.remove(w); 
+}
+```
+
+**What the compiler actually executes:**
+```java
+Iterator<String> it = words.iterator();
+while (it.hasNext()) {
+    String w = it.next();
+    words.remove(w); // 💥 Throws ConcurrentModificationException
+}
+```
+
+---
+
+## 2. The ModCount Safeguard
+Java collections (like `ArrayList`) maintain a structural modification counter called **`modCount`**.
+
+* **Every time you add or remove an element** directly via the collection (`words.remove()`), `modCount` increases.
+* **When the `Iterator` is created**, it takes a snapshot of this value, storing it as **`expectedModCount`**.
+
+---
+
+## 3. The Clash
+During each iteration, the loop calls `it.next()`. The very first thing `it.next()` does is check if the collection has changed behind its back:
+
+```java
+if (modCount != expectedModCount)
+    throw new ConcurrentModificationException();
+```
+
+Because you bypassed the iterator and called `words.remove(w)`, `modCount` changed, but the iterator's `expectedModCount` stayed the same. The iterator detects this mismatch on the very next loop cycle and immediately throws the exception to prevent unpredictable behavior or data corruption.
+
+---
+
+## How to Fix It
+
+### Option A: Use an Explicit Iterator
+If you need to remove elements while looping, use a traditional iterator and call `it.remove()`. This method safely updates both the collection and the iterator's internal counter simultaneously.
+
+```java
+Iterator<String> it = words.iterator();
+while (it.hasNext()) {
+    String w = it.next();
+    if (shouldRemove(w)) {
+        it.remove(); // Safe
+    }
+}
+```
+
+### Option B: Use `removeIf` (Java 8+)
+This is the modern, cleanest approach:
+
+```java
+words.removeIf(w -> shouldRemove(w));
+```
