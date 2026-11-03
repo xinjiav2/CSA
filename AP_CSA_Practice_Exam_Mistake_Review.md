@@ -231,9 +231,8 @@ The **last** matching pair is `black` and `brown`, so the final value of `result
 
 - [ ] **1.15 String Manipulation:** Practice `substring` boundaries and zero-based indexing.
 - [ ] **3.08 Scope and Access:** Distinguish access within a class from access in a different class.
-- [ ] **1.11 Math Class / 1.05 Casting:** Practice inclusive and exclusive random-number bounds.
+- [ ] **1.11 Math Class:** Practice inclusive and exclusive random-number bounds.
 - [ ] **4.09 Traversing ArrayLists:** Trace comparisons, updates, and early returns.
-- [ ] **2.11 Nested Iteration / 4.04 Array Traversals:** Trace both loop indices and every assignment.
-- [ ] **4.05 / 4.10 Array and ArrayList Algorithms:** Practice interpreting what loops accomplish.
+- [ ] **2.11 Nested Iteration:** Trace both loop indices and every assignment.
 
 **Overall pattern:** Q7, Q9, and Q19 were specific Java API/access-rule misunderstandings. Q35 and Q41 were loop-tracing mistakes. Prioritize tracing loop conditions and updates, then review the precise rules for strings, visibility, and random ranges.
