@@ -1,3 +1,9 @@
+---
+title: College Board Review
+permalink: /mcqreview/
+author: Jade
+---
+
 # AP Computer Science A — Practice Exam Mistake Review
 
 This guide reviews the five missed questions (Q7, Q9, Q19, Q35, and Q41), explains the correct answers, and identifies lessons to revisit.
