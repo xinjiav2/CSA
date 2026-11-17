@@ -2,6 +2,10 @@
 
 Reviewed: October 26, 2026
 
+Implementation follow-up: [Microblog author spoofing fix](microblog-author-spoofing-fix.md)
+documents the local fix, migration, and verification status as of October 29, 2026.
+The findings below describe the code inspected before that fix.
+
 ## Finding
 
 **Authenticated users can fabricate replies attributed to other users by submitting replies inside a new post's `data` object.** The main post's author remains the authenticated user, but the nested replies can contain arbitrary author IDs, names, content, and timestamps.
